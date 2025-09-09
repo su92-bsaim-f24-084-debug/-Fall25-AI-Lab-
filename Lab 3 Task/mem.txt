@@ -1,0 +1,7 @@
+18,Turn off AC
+22,Turn on AC
+20,Turn off AC
+24,Turn on AC
+32,Turn on AC
+30,Turn on AC
+27,Turn on AC
