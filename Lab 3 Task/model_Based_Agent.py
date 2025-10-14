@@ -27,7 +27,6 @@ class ModelBasedReflexAgent:
             with open("mem.txt","a") as file:
                 file.write(f"{current_temperature},{action}\n")
         return action
-# simulating different rooms with different current temperatures
 rooms = {
 "Living Room": 18,
 "Bedroom": 32,
@@ -35,10 +34,8 @@ rooms = {
 "Bathroom": 24,
 "Master_Bedroom":27
 }
-# desired temperature for all rooms
 desired_temperature = 20
 agent = ModelBasedReflexAgent(desired_temperature)
-# run the agent for each room
 for room, temperature in rooms.items():
     action = agent.act(temperature)
     print(f"{room}: Current temperature = {temperature}°C. {action}.")
