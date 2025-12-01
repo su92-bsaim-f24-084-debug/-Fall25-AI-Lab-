@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Prediction</title>
+</head>
+<body>
+
+<h2>Stock Price Prediction</h2>
+
+<form method="POST">
+    {% for col in feature_columns %}
+        <label>{{ col }}:</label>
+        <input type="number" step="0.0001" name="{{ col }}" required><br><br>
+    {% endfor %}
+    <button type="submit">Predict</button>
+</form>
+
+{% if predicted_value is not none %}
+    <h3>Predicted Value: {{ predicted_value }}</h3>
+{% endif %}
+
+</body>
+</html>
